@@ -4,6 +4,7 @@ import './components/Card.css'
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
+import Cards from './components/Cards';
 
 function App() {
   const pizzaData = [
@@ -60,33 +61,7 @@ function App() {
     <>
     <Header />
     <Banner />
-    <div className='Card-container'>
-  <div className='card-header'>
-    <h4>Our Delicious Pizzas</h4>
-  </div>
-
-  <div className='card-body'>
-    {
-      pizzaData && pizzaData.map((ele, ind) => (
-        <div className='cards' key={ind}>
-          <div className='card-img'>
-            <img src={ele.image} alt={ele.name} />
-          </div>
-
-          <div className='card-content'>
-            <h4>{ele.name}</h4>
-            <p>{ele.description}</p>
-            <h5>₹{ele.amount}</h5>
-
-            <div className='card-foot'>
-              <button>Add to cart</button>
-            </div>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-  </div>
+    <Cards pizzaData={pizzaData}/> 
     <Footer />
     </>
   );
