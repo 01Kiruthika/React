@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import './components/Card.css'
+
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
-import Cards from './components/Cards';
+import Cards from "./components/Cards";
 
 function App() {
   const pizzaData = [

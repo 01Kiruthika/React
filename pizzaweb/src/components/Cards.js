@@ -16,7 +16,7 @@ const Cards = (props) => {
         {
           props.pizzaData && props.pizzaData.map((ele, indx) => (
             
-            <div className='cards'key={indx}>
+            <div className='cards' key={indx}>
 
               <div className='card-img'>
                 <img src={ele.image} alt={ele.name} />
