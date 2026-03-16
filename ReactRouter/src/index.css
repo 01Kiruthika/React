@@ -61,3 +61,11 @@ nav ul li {
 .home p{
   text-align: centera;
 }
+.home button{
+  /* border: 2px solid yellow; */
+  border: none;
+  margin: 10px;
+  background-color: blue;
+  color: white;
+  padding: 8px 10px;
+}
