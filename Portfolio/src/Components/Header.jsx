@@ -22,6 +22,8 @@ const Header = () => {
             Skills</Link></li>
           <li><Link to="/project"><i class="fa fa-briefcase" aria-hidden="true"></i>
             Project</Link></li>
+          <li><Link to="/miniproject"><i class="fa fa-briefcase" aria-hidden="true"></i>
+            Mini Project</Link></li>
           <li><Link to="/contact"><i class="fa fa-envelope" aria-hidden="true"></i>
             Contact</Link></li>
 

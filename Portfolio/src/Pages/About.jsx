@@ -3,20 +3,25 @@ import './About.css'
 const About = () => {
   return (
     <div className='about'>
-      <h3>About</h3>
+      <h3>Know Me More</h3>
       <p>Who am I?</p>
-      <div className="aboutme">
-        <p>I am Kiruthika Sundaram, an enthusiastic and dedicated Computer Science student with a strong foundation in software development. I have a keen interest in Full Stack Development and have hands-on experience working with the MERN stack.</p>
+      <div className="box">
+        <div className="aboutme">
+          <p>I am Kiruthika Sundaram, a passionate and dedicated Computer Science student with a strong interest in MERN Stack Development. I enjoy building modern and responsive web applications using MongoDB, Express.js, React, and Node.js.
+          </p>
 
-        <p>I am also exploring domains like Artificial Intelligence and Machine Learning to expand my technical knowledge. I am passionate about building efficient, scalable, and user-friendly applications.</p>
-
-        <p>I possess strong problem-solving skills, adaptability, and a continuous learning mindset. I aim to start my career as a software engineer and contribute to innovative and impactful projects.</p>
-
+          <p>
+            I am a quick learner and always eager to explore new tools and technologies in web development. My goal is to become a skilled MERN Stack Developer and build scalable and impactful web applications.</p>
+        </div>
 
       </div>
 
+      <div className="edu">
+        <h3>Education</h3>
+      </div>
     </div>
   )
+    
 }
 
-export default About
+    export default About

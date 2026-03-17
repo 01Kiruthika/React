@@ -2,10 +2,21 @@
 
 
 :root {
-  --border: 2px solid black;
+  --border: 2px solid white;
   --padding: 5px;
   --font-size: 1.5rem;
   --border-radius: 50%;
+
+  --white: #ffffff;
+
+
+  --bg-color: #022c22;
+
+  --accent-color: #10b981;
+
+  --accent-light: #6ee7b7;
+
+  --text-color: #ecfdf5;
 
 
 }
@@ -28,11 +39,15 @@
 aside {
   border: 2px solid;
   grid-area: 'aside';
+  background: #022c22;
 }
 
 main {
   border: 2px solid;
   grid-area: 'main';
+  background: #022c22;
+
+
 }
 
 .logo {
@@ -54,33 +69,63 @@ main {
 
 .menu {
   /* border: 2px solid; */
-  width: 150px;
+  width: 180px;
   padding: 10px;
   margin: 0 auto;
   margin-top: 20px;
 }
 
 .menu ul li {
-  border: 2px solid;
-  width: 120px;
+  border: 2px solid rgb(255, 255, 255);
+  position: relative;
+  width: 160px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   list-style: none;
-  padding: 10px;
-  color: black;
   border-radius: 30px;
-  /* text-decoration: none; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s linear;
 }
 
 .menu ul li a {
+  color: var(--text-color);
   text-decoration: none;
-  color: black;
+  z-index: 1;
+}
+
+.menu ul li::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #6ee7b7);
+  left: 0;
+  top: 0;
+  transition: 0.5s linear;
+}
+
+.menu ul li:hover::before {
+  width: 100%;
+}
+
+.menu ul li:hover {
+  transform: translateX(6px) scale(1.05);
+  box-shadow: 0 0 15px rgba(205, 221, 215, 0.849);
+  border: none;
+}
+
+
+.menu ul li:hover {
+  transform: translateX(10px);
 }
 
 .fa {
   /* border: 2px solid; */
-  margin: 3px;
-  color: black;
+  margin: 5px;
+  color: white;
 }
 
 .icons {
@@ -92,75 +137,30 @@ main {
 }
 
 .about-icons {
-  /* border: 2px solid yellow; */
+  /* border: 2px solid; */
   display: flex;
-  gap: 10px;
-}
-
-.about-icons li {
+  width: 20px;
+  height: 20px;
+  gap: 20px;
   list-style: none;
+  padding: 5px;
 }
 
-.fa-github {
-  width: 40px;
-  height: 40px;
-  border: var(--border);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  border-radius: var(--border-radius);
+.about-icons li a {
+  border: 2px solid rgba(255, 255, 255, 0.822);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   transition: 0.5s;
+  font-size: 20px;
 }
 
-.fa-github:hover {
-  background-color: blue;
-  color: whitesmoke;
-  border-color: white;
-}
-
-.fa-linkedin {
-  width: 40px;
-  height: 40px;
-  border: var(--border);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  border-radius: var(--border-radius);
-  transition: 0.5s;
-}
-
-.fa-linkedin:hover {
-  background-color: blue;
-  color: whitesmoke;
-  border-color: white;
-}
-
-.fa-whatsapp {
-  width: 40px;
-  height: 40px;
-  border: var(--border);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  border-radius: var(--border-radius);
-  transition: 0.5s;
-}
-
-.fa-whatsapp:hover {
-  background-color: blue;
-  color: whitesmoke;
-  border-color: white;
-}
-
-.fa-instagram {
-  width: 40px;
-  height: 40px;
-  border: var(--border);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  border-radius: var(--border-radius);
-  transition: 0.5s;
-}
-
-.fa-instagram:hover {
-  background-color: blue;
-  color: whitesmoke;
-  border-color: white;
+.about-icons li a:hover {
+  background: linear-gradient(45deg, #10b981, #6ee7b7);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #10b981;
 }
