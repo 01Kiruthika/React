@@ -16,12 +16,30 @@ const About = () => {
 
       </div>
 
-      <div className="edu">
+      <div className="edu-container">
         <h3>Education</h3>
+        <div className="edu-box">
+          <div className="card card1">
+            <p><strong>B.Sc Computer Science</strong></p>
+            <p>Bishop Heber College</p>
+            <p>2022 to 2025</p>
+          </div>
+          <div className="card card2">
+            <p><strong>B.Sc Computer Science</strong></p>
+            <p>Bishop Heber College</p>
+            <p>2022 to 2025</p>
+          </div>
+           <div className="card card3">
+            <p><strong>B.Sc Computer Science</strong></p>
+            <p>Bishop Heber College</p>
+            <p>2022 to 2025</p>
+          </div>
+        </div>
+       
       </div>
     </div>
   )
-    
+
 }
 
-    export default About
+export default About

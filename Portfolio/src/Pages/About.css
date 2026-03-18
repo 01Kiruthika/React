@@ -17,7 +17,7 @@
 
 .about {
     border: 2px solid;
-    color: var( --text-color);
+    color: var(--text-color);
 }
 
 .about h3,
@@ -32,3 +32,66 @@ p {
     display: flex;
 }
 
+.edu-container {
+    border: 2px solid;
+    /* text-align: center; */
+}
+
+.edu-container h3 {
+    font-size: 1.5rem;
+    animation: fadeDown 3s ease forwards;
+}
+
+
+.edu-box {
+    border: 2px solid;
+    display: flex;
+    /* justify-content: center; */
+    gap: 30px;
+}
+
+.card {
+    border: 2px solid red;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(50px);
+}
+
+.card1 {
+    animation: fadeUp 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.card2 {
+    animation: fadeUp 0.5s ease forwards;
+    animation-delay: 1s;
+}
+.card3{
+    animation: fadeup 0.5s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateX(900px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 0 20px rgba(16,185,129,0.4);
+  transition:0.3s;
+}

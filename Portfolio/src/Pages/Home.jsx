@@ -9,7 +9,7 @@ const Home = () => {
           <img src="https://www.shutterstock.com/image-photo/beauty-charisma-head-shot-portrait-600nw-2647728057.jpg" alt="my image" />
         </div>
         <div className="about-content">
-          <h2>Hello!!I am Kiruthika Sundaram</h2>
+          <h2>Hello!!  I am Kiruthika Sundaram</h2>
           <h2 class="typing">
             <span>MERN Stack Developer</span>
             {/* <span>Programmer</span> */}
