@@ -95,16 +95,19 @@
 .about-content h2 {
     font-size: 2.2rem;
 }
+.about-content p{
+    text-align: justify;
+}
 
 .typing {
-    /* border: 2px solid blue; */
+    /* border-right: 2px solid; */
     width: 350px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
 .typing span {
-    /* border-right: 2px solid black; */
+    border-right: 2px solid white;
     font-size: 30px;
     white-space: nowrap;
     overflow: hidden;
