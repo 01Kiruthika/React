@@ -10,19 +10,21 @@ function App() {
 
   let handleme = (e) => {
     // alert("hello")
-    debugger;
+    // debugger;
     e.preventDefault()
 
     let emp = { name, email, role }
 
     if (editdetails !== null) {
-      debugger;
-      let updatedList = [...details]
-      updatedList[editdetails] = emp
-      setDetails(updatedList)
+      // debugger;
+      setDetails(
+        details.map((item, index) =>
+          index === editdetails ? emp : item
+        )
+      )
       setEditdetails(null)
     } else {
-      setDetails([...details, emp])
+      setDetails([...details, emp])   
     }
 
     setName("")
@@ -34,7 +36,7 @@ function App() {
 
   let updateme = (indx) => {
     // alert("hello")
-    debugger;
+    // debugger;
     let emp = details[indx]
     setName(emp.name)
     setEmail(emp.email)
@@ -44,11 +46,11 @@ function App() {
 
   let deleteme = (indx) => {
     // alert("hello")
-    debugger;
+    // debugger;
     if (window.confirm("Do you want to delete?")) {
       let updated = details.filter((_, i) => i !== indx)
-      let b = setDetails(updated)
-      console.log(b);
+      setDetails(updated)
+      // console.log(b);
 
     } else {
       alert("your data is safe")
