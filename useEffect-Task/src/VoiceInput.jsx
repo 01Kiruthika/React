@@ -38,11 +38,11 @@ const VoiceInput = () => {
 
     return (
         <div className="box">
-            <h2> Voice to Text (React)</h2>
+            <h2> Voice to Text Converter</h2>
             <button onClick={startListening} disabled={listening}>
                 Start Listening
             </button>
-            <button onClick={stopListening} disabled={!listening} style={{ marginLeft: "10px" }}>
+            <button onClick={stopListening} disabled={!listening}>
                 Stop
             </button>
             <h3>Output:</h3>
