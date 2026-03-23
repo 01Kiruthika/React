@@ -1,114 +1,120 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
-  const [data, setData] = useState([]);
-  const [districts, setDistricts] = useState([]);
-  const [selectedDistrict, setSelectedDistrict] = useState("");
   const [dams, setDams] = useState([]);
-  const [selectedDam, setSelectedDam] = useState("");
-  const [details, setDetails] = useState(null);
+  const [districts, setDistricts] = useState([]);
+  const [selectedDistrict, setSelectedDistrict] = useState("All");
 
   useEffect(() => {
+    debugger;
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    let res = await axios.get(
-      "https://api.data.gov.in/resource/7b3ed3e9-841f-4444-ab3c-e760a08b53b3?api-key=579b464db66ec23bdd000001b523511d5b4a40d94ced32044427f5ff&format=json"
-    );
+  let fetchData = async () => {
+    debugger;
+    try {
+      let res = await axios.get(
+        "https://api.data.gov.in/resource/7b3ed3e9-841f-4444-ab3c-e760a08b53b3?api-key=579b464db66ec23bdd000001b523511d5b4a40d94ced32044427f5ff&format=json"
+      );
 
-    let records = res.data.records;
-    setData(records);
+      let records = res.data.records;
 
-    let uniqueDistricts = [
-      ...new Set(records.map((item) => item.district)),
-    ];
-    setDistricts(uniqueDistricts);
+      setDams(records);
+      
+      console.log(records);
+      
+      let newarr = new Set(records.map((item) => item.district))
+      console.log(newarr);
+      
+      let uniqueDistricts = ["All",...newarr];
+
+      setDistricts(uniqueDistricts);
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const handleDistrictChange = (value) => {
-    setSelectedDistrict(value);
-
-    let filtered = data.filter(
-      (item) => item.district === value
-    );
-
-    setDams(filtered);
-    setSelectedDam("");
-    setDetails(null);
-  };
-
-  const handleDamChange = (value) => {
-    setSelectedDam(value);
-  };
-
-  const showDetails = () => {
-    let dam = dams.find(
-      (item) => item.name_of_dam === selectedDam
-    );
-
-    setDetails(dam);
-  };
+  let newdams = dams.filter((dam) => dam.district === selectedDistrict)
+  console.log(newdams);
+  
+  let filteredDams = selectedDistrict === "All" ? dams : newdams;
 
   return (
-    <div style={{ textAlign: "center", padding: "30px" }}>
-      <h2>Tamil Nadu Dams</h2>
+    <div className="app">
+      <h2 className="title">Tamil Nadu Dams Details</h2>
 
-      {/* District */}
-      <select onChange={(e) => handleDistrictChange(e.target.value)}>
-        <option>Select District</option>
-        {districts.map((d, i) => (
-          <option key={i}>{d}</option>
+      <select
+        value={selectedDistrict}
+        onChange={(e) => setSelectedDistrict(e.target.value)}
+      >
+        {districts.map((dist, index) => (
+          <option key={index} value={dist}>
+            {dist}
+          </option>
         ))}
       </select>
 
-      <br /><br />
+      <div className="container">
+        {filteredDams.map((dam) => (
+          <div key={dam.name_of_dam} className="card">
 
-      {/* Dam */}
-      {dams.length > 0 && (
-        <select onChange={(e) => handleDamChange(e.target.value)}>
-          <option>Select Dam</option>
-          {dams.map((d, i) => (
-            <option key={i}>{d.name_of_dam}</option>
-          ))}
-        </select>
-      )}
+            <div className="inner-card">
+              <h3>{dam.name_of_dam}</h3>
+              <p>{dam.district}</p>
+            </div>
 
-      <br /><br />
+            <div className="row">
+              <div className="mini-card">
+                <p>Taluk</p>
+                <h4>{dam.taluk || "N/A"}</h4>
+              </div>
 
-      <button onClick={showDetails}>Show Details</button>
+              <div className="mini-card">
+                <p>Length</p>
+                <h4>{dam.length_of_dam_m_ || "N/A"}</h4>
+              </div>
 
-      <br /><br />
+              <div className="mini-card">
+                <p>Height</p>
+                <h4>{dam.height_above_lowest_foundation_m_ || "N/A"} m</h4>
+              </div>
+            </div>
 
-      {details && (
-        <div>
-          <h3>{details.name_of_dam}</h3>
+            <div className="single-card">
+              <p>Year of Completion</p>
+              <h4>{dam.year_of_completion || "N/A"}</h4>
+            </div>
 
-          <p><b>District:</b> {details.district}</p>
+            <div className="row">
+              <div className="mini-card">
+                <p>Capacity</p>
+                <h4>{dam.gross_storage_capacity_10_3m3_ || "N/A"}</h4>
+              </div>
 
-          <p>
-            <b>Height:</b> {details.height_above_lowest_foundation_m_} m
-          </p>
+              <div className="mini-card">
+                <p>River</p>
+                <h4>{dam.river || "N/A"}</h4>
+              </div>
+            </div>
 
-          <p>
-            <b>Capacity:</b> {details.gross_storage_capacity_10_3m3_}
-          </p>
+            <div className="row">
+              <div className="mini-card">
+                <p>Nearest City</p>
+                <h4>{dam.nearest_city_town || "N/A"}</h4>
+              </div>
 
-          <p>
-            <b>Year of Completion:</b> {details.year_of_completion}
-          </p>
+              <div className="mini-card">
+                <p>Hydro Power</p>
+                <h4>{dam.hydro_electric_power_mw_ || "N/A"}</h4>
+              </div>
+            </div>
 
-          <p>
-            <b>River:</b> {details.river}
-          </p>
-
-          <p>
-            <b>Hydro Power:</b>{" "}
-            {details.hydro_electric_power_mw_ || "Not Available"}
-          </p>
-        </div>
-      )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ const VoiceInput = () => {
     const [text, setText] = useState("");
     const [listening, setListening] = useState(false);
 
-    let recognition;
+    let recognition = {};
 
     if ("webkitSpeechRecognition" in window) {
         recognition = new window.webkitSpeechRecognition();
@@ -19,7 +19,7 @@ const VoiceInput = () => {
         };
 
         recognition.onerror = (event) => {
-            console.error(event.error);
+            console.log(event.error);
             setListening(false);
         };
     } else {
