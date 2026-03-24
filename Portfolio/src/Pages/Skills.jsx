@@ -19,45 +19,60 @@ const Skills = () => {
       <h2>Skills</h2>
       <div className="skills-container">
 
-        <div className="tilt-card">
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+
           <img src={html} alt="HTML" />
-          <h3>HTML</h3>
+
+          <div className="skill-name">HTML</div>
         </div>
 
-        <div className="tilt-card">
-          <img src={css} alt="HTML" />
-          <h3>CSS</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={css} alt="css" />
+          <div className="skill-name">CSS</div>
         </div>
 
-        <div className="tilt-card">
-          <img src={js} alt="HTML" />
-          <h3>JavaScript</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={js} alt="js" />
+          <div className="skill-name">JavaScript</div>
+
         </div>
 
-        <div className="tilt-card">
-          <img src={boot} alt="HTML" />
-          <h3>BootStrap</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={boot} alt="BootStrap" />
+          <div className="skill-name">BootStrap</div>
         </div>
 
-        <div className="tilt-card">
-          <img src={node} alt="HTML" />
-          <h3>Node</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={node} alt="Node" />
+          <div className="skill-name">Node</div>
+
         </div>
 
-        <div className="tilt-card">
-          <img src={mdb} alt="HTML" />
-          <h3>MongoDB</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={mdb} alt="MongoDB" />
+          <div className="skill-name">MongoDB</div>
+
         </div>
 
-        <div className="tilt-card">
-          <img src={react} alt="HTML" />
-          <h3>React</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={react} alt="React" />
+          <div className="skill-name">React</div>
+
         </div>
 
 
-        <div className="tilt-card">
-          <img src={ex} alt="HTML" />
-          <h3>Express</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={ex} alt="Express" />
+          <div className="skill-name">Express</div>
+
         </div>
 
       </div>
@@ -65,19 +80,25 @@ const Skills = () => {
 
       <h2>Tools</h2>
       <div className="skills-container">
-        <div className="tilt-card">
-          <img src={git} alt="HTML" />
-          <h3>Github</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={git} alt="Github" />
+          <div className="skill-name">Github</div>
+
         </div>
 
-        <div className="tilt-card">
-          <img src={vercel} alt="HTML" />
-          <h3>Vercel</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={vercel} alt="Vercel" />
+          <div className="skill-name">Vercel</div>
+
         </div>
 
-        <div className="tilt-card">
-          <img src={vs} alt="HTML" />
-          <h3>VS Code</h3>
+        <div className="tilte-card">
+          <div className="spotlight"></div>
+          <img src={vs} alt="VS Code" />
+          <div className="skill-name">VS Code</div>
+
         </div>
 
 

@@ -1,83 +1,93 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .skills-section {
-    border: 4px solid;
-    color: white;
+  /* border: 4px solid; */
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .skills-container {
-    border: 2px solid white;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px;
+  /* border: 2px solid white; */
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
 }
 
-.tilt-card {
-    width: 160px;
-    height: 180px;
-    border-radius: 20px;
+.tilte-card {
+  /* border: 2px solid; */
+  position: relative;
+  width: 163px;
+  height: 155px;
+  border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    transition: transform 0.2s ease;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    cursor: pointer;
-
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.tilt-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    pointer-events: none;
+.tilte-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.tilte-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+
 
 }
 
-.tilt-card h3 {
-    font-size: 14px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.3s ease;
-}
-
-.tilt-card::before {
-  content: "";
+.skill-name {
+  /* border: 2px solid; */
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #10b981, #6ee7b7);
+  bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s linear;
+  z-index: 2;
+}
+
+.tilte-card:hover .skill-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotlight {
+  /* border: 2px solid red; */
+  position: absolute;
+  width: 160px;
+  height: 180px;
+  /* background:  rgba(16, 185, 129, 0.4); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: 0.3s ease;
   z-index: -1;
-  border-radius: 20px;
 }
 
-.tilt-card:hover::before {
+.tilte-card:hover .spotlight {
   opacity: 1;
-}
-
-.tilt-card:hover {
-  transform: translateY(-6px); 
-  box-shadow: 0 10px 20px rgba(16,185,129,0.3);
-}
-
-.tilt-card:hover h3 {
-  opacity: 1;
-  transform: translateY(0);
 }
