@@ -24,7 +24,6 @@
 .about h3,
 p {
     font-size: 20px;
-    padding: 5px;
 }
 
 .box {
@@ -35,7 +34,7 @@ p {
 
 .edu-container {
     /* border: 2px solid; */
-    padding: 10px;
+    /* padding: 10px; */
     /* text-align: center; */
 }
 
@@ -61,6 +60,7 @@ p {
     background: rgba(255, 255, 255, 0.05);
     transform: translateY(30px);
     opacity: 0;
+    margin-left: 5px;
 }
 
 .card1 {
@@ -107,10 +107,10 @@ p {
 .personal {
     /* border: 2px solid; */
     width: 950px;
-    height: 250px;
+    height: 210px;
     display: flex;
     gap: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     margin: 0 auto;
 }
 
@@ -120,27 +120,19 @@ p {
     font-weight: 500;
 }
 
-.personal-left {
-    /* border: 2px solid darkgoldenrod; */
-    width: 430px;
-}
-
-.personal-right {
-    /* border: 2px solid yellow; */
-    width: 300px;
-}
 
 .cv-button {
     /* border: 2px solid; */
     width: 200px;
     display: flex;
-    justify-content: center;
+    justify-content:start;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .cv-button button {
     border: 2px solid;
-    padding: 10px 25px;
+    padding: 8px 25px;
     border-radius: 20px;
     background-color: #022c22;
     color: white;
@@ -167,13 +159,32 @@ p {
 }
 
 .cv-button button:hover {
-  transform: translateX(10px) scale(1.05);
-  box-shadow: 0 0 15px rgba(205, 221, 215, 0.849);
-  border: none;
+    /* transform: translateX(10px) scale(1.05); */
+    box-shadow: 0 0 10px rgba(205, 221, 215, 0.849);
+    border: none;
 }
 
 
 .fa-download {
     font-size: 15px;
     margin: 5px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 110px 30px auto; 
+    /* align-items: center; */
+}
+
+.label {
+    font-weight: 600;
+}
+
+.colon {
+    text-align: center;
 }

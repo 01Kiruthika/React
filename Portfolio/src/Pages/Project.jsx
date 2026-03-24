@@ -18,7 +18,7 @@ const Project = () => {
       image: "https://picsum.photos/400/250?2",
       title: "SK Saree Boutique",
       description: "An elegant boutique website displaying saree collections with modern UI, product sections, and responsive layout.",
-      languages: ["HTML", "Bootstrap"],
+      languages: ["HTML","CSS", "Bootstrap"],
       link: "https://sk-boutique.vercel.app/"
     },
     {

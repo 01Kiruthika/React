@@ -16,31 +16,36 @@
   font-size: 2rem;
 
 }
-.project-Container h3::first-letter{
-  color: #00f5d4;
+
+.project-Container h3::first-letter {
+  color: gold;
 }
-.letter::first-letter{
-  color: #00f5d4;
+
+.letter::first-letter {
+  color: gold;
 }
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 10px;
 }
 
 
 .carddesign {
-  width: 300px;
+  width: 310px;
+  height: auto;
   background: #1e1e1e;
-  border-radius: 15px;
+  border-radius: 10px;
   /* overflow: hidden; */
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
   overflow: hidden;
+  /* padding-top: 5px; */
 
 }
 
@@ -48,11 +53,15 @@
 
 .imgBox {
   /* border: 2px solid red; */
+  width: 305px;
   position: relative;
   overflow: hidden;
   /* padding: 5px; */
-  border-radius: 15px;
-  margin: 5px;
+  /* border-radius: 15px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 2px;
+  margin-top: 4px;
 }
 
 .imgBox img {
@@ -60,12 +69,12 @@
   height: 200px;
   object-fit: cover;
   transition: 0.5s;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 
 .carddesign:hover img {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 
@@ -108,11 +117,12 @@
 }
 
 .content h2 {
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -133,13 +143,12 @@
 .carddesign::before {
   content: "";
   position: absolute;
-  width: 500px;
-  padding: 10px;
+  width: 400px;
   height: 680px;
   top: -50%;
-  left: -40%;
+  left: -50%;
 
-  background: conic-gradient(from 0deg,
+  background: conic-gradient(from 50deg,
       #00f5d4,
       #9b5de5);
 
@@ -170,4 +179,3 @@
     transform: rotate(360deg);
   }
 }
-

@@ -8,6 +8,7 @@ import Skills from '../Pages/Skills.jsx'
 import Project from '../Pages/Project.jsx'
 import Contact from '../Pages/Contact.jsx'
 import MiniProject from '../Pages/MiniProject.jsx'
+import Resume from '../Pages/Resume.jsx'
 
 const Main = () => {
     return (
@@ -22,6 +23,7 @@ const Main = () => {
                     <Route path='/skills' element={<Skills />}></Route>
                     <Route path='/project' element={<Project />}></Route>
                     <Route path='/miniproject' element={<MiniProject />}></Route>
+                    <Route path='/resume' element={<Resume />}></Route>
                     <Route path='/contact' element={<Contact />}></Route>
                 </Routes>
             </main>

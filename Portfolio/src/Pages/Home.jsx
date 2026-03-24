@@ -20,14 +20,20 @@ const Home = () => {
           <p>I am a passionate Full Stack Developer and Computer Science student who loves building modern web applications. I enjoy learning new technologies and solving real-world problems through coding.
           </p>
 
-          <button
-            className="project-btn"
-            onClick={() => navigate('/project')}
-          >
-            View My Projects
-          </button>
 
-          <Icons />
+          <div className="btttn">
+            <button
+              className="project-btn"
+              onClick={() => navigate('/project')}
+            ><span>
+                View My Projects
+              </span>
+
+            </button>
+
+            <Icons />
+          </div>
+
         </div>
 
       </div>

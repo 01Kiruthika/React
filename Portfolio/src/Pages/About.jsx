@@ -8,25 +8,61 @@ const About = () => {
         <div className="aboutme">
           <div className="personal">
 
-            <div className="personal-left">
-              <h3>Personal Infos</h3>
-              <h4><strong>Name:</strong>Kiruthika Sundaram</h4>
-              <h4><strong>Age:</strong>21</h4>
-              <h4><strong>Location:</strong>Karur,Tamil Nadu</h4>
-              <h4><strong>Email:</strong>kiruthikasundaram2004@gmail.com</h4>
-            </div>
-            <div className="personal-right">
-              <h4></h4>
-              <h4><strong>Date of Birth:</strong>01/11/2004</h4>
-              <h4><strong>Nationality:</strong>Indian</h4>
-              <h4><strong>Phone Number:</strong>9159620313</h4>
-              <h4><strong>Language:</strong>Tamil,English,Telugu</h4>
+            <div className="info-grid">
+
+              <div className="info-row">
+                <span className="label">Name</span>
+                <span className="colon">:</span>
+                <span className="value">Kiruthika Sundaram</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Date of Birth</span>
+                <span className="colon">:</span>
+                <span className="value">01/11/2004</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Age</span>
+                <span className="colon">:</span>
+                <span className="value">21</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Nationality</span>
+                <span className="colon">:</span>
+                <span className="value">Indian</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Location</span>
+                <span className="colon">:</span>
+                <span className="value">Karur, Tamil Nadu</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Phone Number</span>
+                <span className="colon">:</span>
+                <span className="value">9159620313</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Email</span>
+                <span className="colon">:</span>
+                <span className="value">kiruthikasundaram2004@gmail.com</span>
+              </div>
+
+              <div className="info-row">
+                <span className="label">Language</span>
+                <span className="colon">:</span>
+                <span className="value">Tamil, English, Telugu</span>
+              </div>
+
             </div>
 
-            <div className="cv-button">
-                   <button>Download CV<i class="fa fa-download" aria-hidden="true"></i></button>
-            </div>
-
+          </div>
+          <div className="cv-button">
+            <button>Download CV<i class="fa fa-download" aria-hidden="true"></i></button>
           </div>
           {/* <p>I am Kiruthika Sundaram, a passionate and dedicated Computer Science student with a strong interest in MERN Stack Development. I enjoy building modern and responsive web applications using MongoDB, Express.js, React, and Node.js.
           </p> */}
