@@ -95,7 +95,8 @@
 .about-content h2 {
     font-size: 2.2rem;
 }
-.about-content p{
+
+.about-content p {
     text-align: justify;
 }
 
@@ -125,4 +126,21 @@
     to {
         width: 320px;
     }
+}
+
+.project-btn {
+    border: 2px solid red;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00f5d4, #9b5de5);
+    /* border: none; */
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    transform: scale(1.05);
 }
