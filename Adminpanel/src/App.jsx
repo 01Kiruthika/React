@@ -1,28 +1,38 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Header from "./components/Header.jsx";
+import Main from "./components/Main.jsx";
+import Aside from "./components/Aside.jsx";
+import Footer from "./components/Footer.jsx";
+import Login from "./Pages/Login";
+import { createContext } from "react";
 
-import './index.css'
-import Header from './components/Header'
-import Aside from './components/Aside'
-import Main from './components/Main'
-import Footer from './components/Footer'
+export const UserName = createContext();
 
 function App() {
-
+  const [name, setName] = useState("");
+  const [LoggedIn, setLoggedIn] = useState(false);
 
   return (
-    <>
-      <div className="Container">
-       <Header />
+    <div className="Container">
 
-      <Aside />
 
-       <Main />
 
-        <Footer />
-      </div>
+      {LoggedIn ? (
+        <>
+          <UserName.Provider value={{ name, setName }}>
+            <Header />
+          </UserName.Provider>
+          <Main />
+          <Aside />
+          <Footer />
+        </>
+      ) : (
+        <Login setName={setName} setIsLoggedIn={setLoggedIn} />
+      )}
 
-    </>
-  )
+    </div>
+
+  );
 }
 
-export default App
+export default App;

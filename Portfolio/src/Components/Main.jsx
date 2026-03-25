@@ -10,12 +10,17 @@ import Contact from '../Pages/Contact.jsx'
 import MiniProject from '../Pages/MiniProject.jsx'
 import Resume from '../Pages/Resume.jsx'
 
-const Main = () => {
+const Main = ({ open, setOpen }) => {
     return (
         <>
 
             <main>
-                
+
+
+                <div className="close-btn" onClick={() => setOpen(false)}>
+                    <i className="fa fa-times"></i>
+                </div>
+
                 <Routes>
                     <Route path='/' element={<Home />}>Home</Route>
                     <Route path='/home' element={<Home />}></Route>

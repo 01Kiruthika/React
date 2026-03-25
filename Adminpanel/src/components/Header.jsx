@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from "react";
+import {UserName } from "../App.jsx";
 
 const Header = () => {
+    const { name } = useContext(UserName);
+
     return (
-        <header>
-            <h2>Header</h2>
+        <div className="header">
+            <h2>Welcome, {name}</h2>
+        </div>
+    );
+};
 
-        </header>
-    )
-}
-
-export default Header
+export default Header;

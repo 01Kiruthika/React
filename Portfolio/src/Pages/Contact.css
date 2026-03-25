@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact {
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+ 
+}
+h2{
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 2rem;
+}
+h2 span{
+  color: gold;
+}
+.form-container {
+  /* border: 2px solid; */
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+  color: #ecfdf5;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #6ee7b7;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #6ee7b7;
+  border-radius: 8px;
+  color: #ecfdf5;
+  outline: none;
+}
+
+.input-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 15px;
+  color: #10b981;
+  background: #022c22;
+  padding: 0 5px;
+}
+
+
+button {
+  /* width: 100%; */
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #10b981, #6ee7b7);
+  color: #022c22;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(110, 231, 183, 0.7);
+}
+.iconsget{
+  /* border: 2px solid red; */
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+.iconsplace{
+  /* border: 2px solid; */
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    width: 90%;
+  }
+
+ 
+}

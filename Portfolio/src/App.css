@@ -180,3 +180,60 @@ main {
   box-shadow: 0 0 15px #10b981;
   transform: translateY(-10px);
 }
+
+
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 22px;
+  color: white;
+  background: #10b981;
+  padding: 8px 12px;
+  border-radius: 5px;
+  z-index: 200;
+  cursor: pointer;
+   transition: 0.5s;
+}
+
+.close-btn {
+  display: none;
+  text-align: right;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+ 
+}
+
+@media (max-width: 768px) {
+
+  .Container {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    transition: 0.3s ease;
+    z-index: 100;
+  }
+
+  aside.active {
+    left: 0;
+  }
+
+  main {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

@@ -1,9 +1,11 @@
 import React from 'react'
 import './About.css'
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className='about'>
-      <h3>About Me</h3>
+      <h3>About <span className='colorme'>Me</span></h3>
       <div className="box">
         <div className="aboutme">
           <div className="personal">
@@ -62,7 +64,8 @@ const About = () => {
 
           </div>
           <div className="cv-button">
-            <button>Download CV<i class="fa fa-download" aria-hidden="true"></i></button>
+            <Link to="/kiruthika_resume.pdf" target='_blank' download>
+              Download CV<i class="fa fa-download" aria-hidden="true"></i></Link>
           </div>
           {/* <p>I am Kiruthika Sundaram, a passionate and dedicated Computer Science student with a strong interest in MERN Stack Development. I enjoy building modern and responsive web applications using MongoDB, Express.js, React, and Node.js.
           </p> */}
@@ -76,17 +79,17 @@ const About = () => {
       <div className="edu-container">
         <h3>Education</h3>
         <div className="edu-box">
-          <div className="card card1">
+          <div className="cards card1">
             <p><strong>B.Sc Computer Science</strong></p>
             <p>Bishop Heber College</p>
             <p>2022 to 2025</p>
           </div>
-          <div className="card card2">
+          <div className="cards card2">
             <p><strong>HSC</strong></p>
             <p>C.S.I Methodist Girls Hr Sec School</p>
             <p>2021 to 2022</p>
           </div>
-          <div className="card card3">
+          <div className="cards card3">
             <p><strong>SSLC</strong></p>
             <p>C.S.I Methodist Girls Hr Sec School</p>
             <p>2019 to 2020</p>

@@ -3,10 +3,10 @@ import '../App.jsx'
 import '../App.css'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ open, setOpen }) => {
   return (
 
-    <aside>
+    <aside className={open ? "active" : ""}>
       <div className="logo">
         {/* <img src="https://cdn.3dnames.co/previews/ae02/250x250/k/ae02kiruthika3dxx.webp" alt="" /> */}
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5UR5MKiLm57mTg9CCKaJMnRZ9y0ZNf3Md4A&s" alt="" />

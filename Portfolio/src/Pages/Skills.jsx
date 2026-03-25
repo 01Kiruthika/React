@@ -15,8 +15,7 @@ import vercel from '../Images/vercel.png'
 const Skills = () => {
   return (
     <div className="skills-section">
-
-      <h2>Skills</h2>
+      <h2><span>Sk</span>ills</h2>
       <div className="skills-container">
 
         <div className="tilte-card">
@@ -78,7 +77,7 @@ const Skills = () => {
       </div>
 
 
-      <h2>Tools</h2>
+      <h2><span>To</span>ols</h2>
       <div className="skills-container">
         <div className="tilte-card">
           <div className="spotlight"></div>

@@ -10,6 +10,9 @@
   text-align: center;
   padding: 10px;
 }
+.skills-section h2 span{
+  color: gold;
+}
 
 .skills-container {
   /* border: 2px solid white; */

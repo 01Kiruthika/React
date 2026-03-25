@@ -1,13 +1,17 @@
 import React from "react";
 import "./Projectstyle.css";
 import ProjectCard from "./ProjectCard.jsx"
+import Fish from '../Images/fish.jpg'
+import Saree from '../Images/saree.jpg'
+import Floral from '../Images/floral.jpg'
+import Library from '../Images/library.jpg'
 
 
 const Project = () => {
   const projects = [
     {
       id: 1,
-      image: "https://picsum.photos/400/250?1",
+      image: Fish ,
       title: "Fish Aquarium",
       description: "A visually appealing aquarium website showcasing different fish species with smooth animations and responsive design.",
       languages: ["HTML", "CSS"],
@@ -15,15 +19,15 @@ const Project = () => {
     },
     {
       id: 2,
-      image: "https://picsum.photos/400/250?2",
+      image: Saree ,
       title: "SK Saree Boutique",
       description: "An elegant boutique website displaying saree collections with modern UI, product sections, and responsive layout.",
-      languages: ["HTML","CSS", "Bootstrap"],
+      languages: ["HTML", "CSS", "Bootstrap"],
       link: "https://sk-boutique.vercel.app/"
     },
     {
       id: 3,
-      image: "https://picsum.photos/400/250?3",
+      image: Floral,
       title: "Floral Fantasy",
       description: "A creative floral-themed website featuring interactive UI elements, animations, and a vibrant design experience.",
       languages: ["HTML", "CSS", "JavaScript"],
@@ -31,12 +35,12 @@ const Project = () => {
     },
     {
       id: 4,
-      image: "https://picsum.photos/400/250?1",
+      image: Library,
       title: "Library Management",
       description:
         "A dynamic library management system is to add books and students, manage borrowing, track issued books, and show remaining stock in simple interface.",
       languages: ["HTML", "CSS", "JQuery"],
-      link: "https://fish-aquarium-lovat.vercel.app/"
+      link: "https://library-management-weld-xi.vercel.app/"
     }
   ];
 

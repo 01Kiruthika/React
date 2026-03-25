@@ -132,10 +132,11 @@
     /* border: 2px solid; */
     display: flex;
     justify-content: space-between;
-    margin-top: 5px;
+    margin-top: 10px;
+    padding: 10px;
 }
-.project-btn {
-    /* border: 2px solid white; */
+.btttn .project-btn {
+    /* border: 5px solid red; */
     padding: 10px 20px;
     background-color: var(--bg-color);
     /* background: linear-gradient(45deg, #00f5d4, #9b5de5); */

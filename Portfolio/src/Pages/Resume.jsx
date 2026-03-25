@@ -4,24 +4,23 @@ import "./Resume.css";
 const Resume = () => {
     return (
         <>
-            <div className="title">
+            <div className="protiltle">
                 <h3>Resume</h3>
             </div>
             <div className="resume-container">
-                {/* <h3>Resume</h3> */}
 
-
+            
                 <div className="resume-left">
 
                     <div className="card profile-card">
                         <h2>Kiruthika Sundaram</h2>
-                        <h4 className="role">
+                        <p className="role">
                             B.Sc Computer Science | Aspiring Full Stack Developer
-                        </h4>
+                        </p>
 
                         <p>Karur, Tamil Nadu</p>
                         <p>kiruthikasundaram2004@gmail.com</p>
-                        <p>9159620313</p>
+                        <p> 9159620313</p>
                     </div>
 
                     <div className="card summary-card">
@@ -35,7 +34,7 @@ const Resume = () => {
 
                 </div>
 
-
+       
                 <div className="resume-right">
 
                     <div className="card education-card">
@@ -64,14 +63,21 @@ const Resume = () => {
                         <h3>Projects</h3>
 
                         <ul>
-                            <li>Smart Hospital Management System (React)</li>
-                            <li>Ambulance Detection using Computer Vision</li>
-                            <li>Late Payment Prediction (Machine Learning)</li>
+                            <li>
+                                Fish Aquarium using HTML & CSS
+                            </li>
+                            <li>
+                                SK Saree Boutique using HTML, CSS & Bootstrap
+                            </li>
+                            <li>
+                                Floral Fantasy using HTML, CSS & JavaScript
+                            </li>
                         </ul>
                     </div>
 
                 </div>
 
+                {/* TIMELINE LINE */}
                 <div className="timeline"></div>
 
             </div>
@@ -80,3 +86,4 @@ const Resume = () => {
 };
 
 export default Resume;
+
