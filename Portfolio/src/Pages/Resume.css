@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-.protiltle h3{
+.protiltle h3 {
     text-align: center;
     color: gold;
     font-size: 2rem;
     padding: 10px;
 }
+
 .resume-container {
     /* border: 5px solid; */
     display: flex;
@@ -36,7 +37,7 @@
 
 .resume-left,
 .resume-right {
-    width:370px;
+    width: 370px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -61,9 +62,11 @@
 .profile-card {
     animation-delay: 0.3s;
 }
-.profile-card p{
+
+.profile-card p {
     font-size: 16px;
 }
+
 .summary-card {
     animation-delay: 0.6s;
 }
@@ -75,7 +78,8 @@
 .project-card {
     animation-delay: 1.2s;
 }
-.project-card ul li{
+
+.project-card ul li {
     list-style: none;
 }
 
@@ -114,18 +118,52 @@
     }
 }
 
+@media screen and (max-width: 768px) {
 
-@media (max-width: 768px) {
+   
     .resume-container {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
+   
     .timeline {
         display: none;
     }
 
+    
     .resume-left,
     .resume-right {
         width: 100%;
+        align-items: center;
     }
+
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+    }
+
+
+    .project-card ul li {
+        font-size: 14px;
+    }
+
 }

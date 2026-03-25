@@ -31,7 +31,7 @@
 .Container {
   /* border: 2px solid #ffff00; */
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-columns: 300px auto;
   grid-template-areas: "aside main";
 
@@ -52,7 +52,7 @@ aside {
 
 
 main {
-  /* border: 2px solid; */
+  border: 2px solid;
   grid-area: main;
   min-height: 100vh;
   padding: 20px;
@@ -188,14 +188,14 @@ main {
   position: fixed;
   top: 15px;
   left: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: white;
   background: #10b981;
-  padding: 8px 12px;
+  padding: 5px 8px;
   border-radius: 5px;
   z-index: 200;
   cursor: pointer;
-   transition: 0.5s;
+  transition: 0.5s;
 }
 
 .close-btn {
@@ -205,10 +205,10 @@ main {
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
- 
+
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   .Container {
     border: 5px solid red;
@@ -239,4 +239,27 @@ main {
   .menu-toggle {
     display: block;
   }
+
+  .logo {
+    /* border: 2px solid; */
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+  }
+
+  .menu {
+    /* border: 2px solid; */
+    width: 150px;
+    padding: 5px;
+    margin-top: 0;
+  }
+
+  .menu ul li {
+    /* border: 2px solid; */
+    margin-bottom: 10px;
+    padding: 5px 8px;
+   
+  }
+
+  
 }

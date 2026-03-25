@@ -77,7 +77,7 @@ const About = () => {
       </div>
 
       <div className="edu-container">
-        <h3>Education</h3>
+        <h3><span>Edu</span>cation</h3>
         <div className="edu-box">
           <div className="cards card1">
             <p><strong>B.Sc Computer Science</strong></p>

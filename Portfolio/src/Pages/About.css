@@ -17,15 +17,19 @@
 
 .about {
     /* border: 2px solid; */
+    min-height: 100vh;
     color: var(--text-color);
-    padding: 20px;
+    /* padding: 20px; */
 }
+
+
 
 .about h3,
 p {
     font-size: 20px;
 }
-.colorme{
+
+.colorme {
     color: gold;
 }
 
@@ -33,12 +37,7 @@ p {
     /* border: 2px solid red; */
     margin-top: 25px;
     display: flex;
-}
-
-.edu-container {
-    /* border: 2px solid; */
-    /* padding: 10px; */
-    /* text-align: center; */
+    flex-wrap: wrap;
 }
 
 .edu-container h3 {
@@ -46,11 +45,14 @@ p {
     animation: fadeDown 3s ease forwards;
     padding: 10px;
 }
-
+.edu-container h3 span{
+    color: gold;
+}
 
 .edu-box {
     /* border: 2px solid; */
     display: flex;
+    flex-wrap: wrap;
     /* justify-content: center; */
     gap: 5px;
 }
@@ -109,8 +111,9 @@ p {
 
 .personal {
     /* border: 2px solid; */
-    width: 950px;
-    height: 210px;
+    max-width: 950px;
+    height: auto;
+    flex-wrap: wrap;
     display: flex;
     gap: 10px;
     /* padding: 10px; */
@@ -123,9 +126,10 @@ p {
     /* border: 2px solid; */
     width: 200px;
     display: flex;
-    justify-content:start;
+    justify-content: start;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .cv-button a {
@@ -168,15 +172,16 @@ p {
     font-size: 15px;
     margin: 5px;
 }
+
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
 .info-row {
     display: grid;
-    grid-template-columns: 110px 30px auto; 
+    grid-template-columns: 100px 40px 300px;
     /* align-items: center; */
 }
 
@@ -187,6 +192,69 @@ p {
 .colon {
     text-align: center;
 }
-.value{
+
+.value {
     font-size: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .about {
+        padding: 15px;
+    }
+
+    .about h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .personal {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row {
+        grid-template-columns: 90px 15px auto;
+    }
+
+    .value {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+
+    .cv-button {
+        width: 80%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .cv-button a {
+        width: 100%;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .edu-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 320px;
+        margin-left: 0;
+    }
+
 }

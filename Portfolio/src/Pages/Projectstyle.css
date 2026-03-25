@@ -179,3 +179,49 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+
+  .project-Container h3 {
+    font-size: 1.5rem;
+  }
+
+
+  .project-grid {
+    justify-content: center;
+    gap: 15px;
+  }
+
+
+  .carddesign {
+    width: 100%;
+
+    max-width: 320px;
+  }
+
+
+  .imgBox {
+    width: 100%;
+    margin: 0;
+  }
+
+  .imgBox img {
+    height: 180px;
+  }
+
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+
+  .demo-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+}

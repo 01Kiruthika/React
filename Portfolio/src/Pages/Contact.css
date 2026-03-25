@@ -10,17 +10,20 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
- 
+
 }
-h2{
+
+h2 {
   text-align: center;
   color: white;
   padding: 10px;
   font-size: 2rem;
 }
-h2 span{
+
+h2 span {
   color: gold;
 }
+
 .form-container {
   /* border: 2px solid; */
   width: 420px;
@@ -71,10 +74,10 @@ h2 span{
   transition: 0.3s;
 }
 
-.input-group input:focus + label,
-.input-group input:valid + label,
-.input-group textarea:focus + label,
-.input-group textarea:valid + label {
+.input-group input:focus+label,
+.input-group input:valid+label,
+.input-group textarea:focus+label,
+.input-group textarea:valid+label {
   top: -10px;
   left: 10px;
   font-size: 15px;
@@ -100,13 +103,15 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(110, 231, 183, 0.7);
 }
-.iconsget{
+
+.iconsget {
   /* border: 2px solid red; */
   margin-top: 50px;
   text-align: center;
   color: white;
 }
-.iconsplace{
+
+.iconsplace {
   /* border: 2px solid; */
   display: flex;
   justify-content: center;
@@ -114,10 +119,55 @@ button:hover {
   margin-top: 15px;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 768px) {
+  
+
+  .contact {
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+
   .form-container {
-    width: 90%;
+    width: 100%;
+    max-width: 350px;
+   
+    padding: 20px;
+  }
+
+  
+  .input-group input,
+  .input-group textarea {
+    font-size: 14px;
+    padding: 10px;
   }
 
  
+  .input-group label {
+    font-size: 12px;
+  }
+
+ 
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+ 
+  .iconsget {
+    margin-top: 30px;
+  }
+
+  .iconsplace {
+    margin-left: 0;
+    flex-wrap: wrap;
+  
+    gap: 10px;
+  }
+
 }
