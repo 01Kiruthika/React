@@ -29,9 +29,9 @@
 }
 
 .Container {
-  border: 2px solid #ffff00;
+  /* border: 2px solid #ffff00; */
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-columns: 300px auto;
   grid-template-areas: "aside main";
 
@@ -40,7 +40,7 @@
 
 aside {
   /* border: 2px solid; */
-  grid-area: 'aside';
+  grid-area: aside;
   width: 300px;
   height: 100vh;
   background: #022c22;
@@ -58,7 +58,7 @@ main {
   padding: 20px;
   background: #022c22;
 
-  /* margin-left: 300px;  */
+  /* margin-left:300px;  */
 }
 
 .logo {
@@ -187,7 +187,7 @@ main {
   display: none;
   position: fixed;
   top: 15px;
-  left: 15px;
+  left: 20px;
   font-size: 22px;
   color: white;
   background: #10b981;
@@ -200,6 +200,7 @@ main {
 
 .close-btn {
   display: none;
+  width: 50px;
   text-align: right;
   padding: 10px;
   font-size: 20px;
@@ -210,17 +211,19 @@ main {
 @media (max-width: 768px) {
 
   .Container {
+    border: 5px solid red;
+    height: auto;
+    width: auto;
     grid-template-columns: 1fr;
   }
 
   aside {
     position: fixed;
-    left: -100%;
+    left: -500px;
     top: 0;
-    width: 80%;
-    max-width: 300px;
+    width: 50%;
     height: 100vh;
-    transition: 0.3s ease;
+    transition: 0.5s linear;
     z-index: 100;
   }
 

@@ -128,13 +128,15 @@
         width: 320px;
     }
 }
-.btttn{
+
+.btttn {
     /* border: 2px solid; */
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     padding: 10px;
 }
+
 .btttn .project-btn {
     /* border: 5px solid red; */
     padding: 10px 20px;
@@ -149,3 +151,67 @@
 }
 
 
+@media (max-width: 768px) {
+
+
+    .homecontainer {
+        flex-direction: column;
+        /* padding: 20px; */
+        text-align: center;
+    }
+
+    .about-me {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+
+    .my-image {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .about-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .typing {
+        /* border: 2px solid; */
+        padding: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    .typing span {
+        /* border-right: 2px solid red; */
+        width: 150px;
+        font-size: 13px;
+        padding: 0;
+        animation: typing 10s steps(22) infinite;
+        margin: 0;
+    }
+
+
+    .btttn {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btttn .project-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+}
