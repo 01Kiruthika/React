@@ -1,57 +1,50 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.container {
+  text-align: center;
+  margin-top: 50px;
 }
 
-
-.box {
-    width: 400px;
-    margin: 80px auto;
-    padding: 30px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    text-align: center;
-    color: white;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+/* Circle */
+.circle {
+  width: 140px;
+  height: 140px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: #111;
 }
 
-
-.box h2 {
-    margin-bottom: 20px;
+/* Listening */
+.circle.listening {
+  background: radial-gradient(circle, #00f, #0ff);
+  box-shadow: 0 0 40px #00f;
+  animation: pulse 1s infinite;
 }
 
-
-.box button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.5s;
-     background-color: #00c853;
-    color: white;
+/* Speaking */
+.circle.speaking {
+  background: radial-gradient(circle, #0ff, #00f);
+  box-shadow: 0 0 40px #0ff;
 }
 
-
-
-.box button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+/* Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
-.box button:disabled {
-    background-color: gray;
-    cursor: not-allowed;
+/* Text */
+.textBox {
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+  min-height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-.box p {
-    margin-top: 20px;
-    font-size: 18px;
-    background: white;
-    color: black;
-    padding: 10px;
-    border-radius: 8px;
-    min-height: 40px;
+/* Buttons */
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
