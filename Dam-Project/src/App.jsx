@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import "./App.css";
 import DamCard from "./DamCard";
 
@@ -15,17 +14,19 @@ function App() {
 
   const fetchData = async () => {
     try {
-      let res = await axios.get(
+      let response = await fetch(
         "https://api.data.gov.in/resource/7b3ed3e9-841f-4444-ab3c-e760a08b53b3?api-key=579b464db66ec23bdd000001b523511d5b4a40d94ced32044427f5ff&format=json"
       );
 
-      let records = res.data.records;
+      let data = await response.json();
+      let records = data.records;
+
       setDams(records);
 
       let uniqueDistricts = ["All", ...new Set(records.map((d) => d.district))];
       setDistricts(uniqueDistricts);
     } catch (error) {
-      console.log(error);
+      console.log("Error fetching data:", error);
     }
   };
 
@@ -39,12 +40,14 @@ function App() {
     ...new Set(damsInDistrict.map((d) => d.name_of_dam)),
   ];
 
-  let filteredDams = dams.filter((dam) => {
-    return (
-      (selectedDistrict === "All" || dam.district === selectedDistrict) &&
-      (selectedDam === "All" || dam.name_of_dam === selectedDam)
-    );
-  });
+  let filteredDams =
+    selectedDam === "All"
+      ? dams   
+      : dams.filter(
+        (dam) =>
+          dam.district === selectedDistrict &&
+          dam.name_of_dam === selectedDam
+      );
 
   return (
     <div className="app">
@@ -56,7 +59,7 @@ function App() {
           value={selectedDistrict}
           onChange={(e) => {
             setSelectedDistrict(e.target.value);
-            setSelectedDam("All");//reset dam
+            setSelectedDam("All");
           }}
         >
           {districts.map((dist) => (
@@ -69,6 +72,7 @@ function App() {
         <h5>Dam</h5>
         <select
           value={selectedDam}
+          disabled={selectedDistrict === "All"}
           onChange={(e) => setSelectedDam(e.target.value)}
         >
           {damNames.map((dam) => (
@@ -92,4 +96,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
