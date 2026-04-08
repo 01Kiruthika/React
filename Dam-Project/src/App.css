@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+   /* max-width: 1200px; */
 }
 
 
@@ -151,9 +152,30 @@ select {
   margin-right: 0;
   font-size: 18px;
 }
-/* Leaflet CSS */
+/* App.css */
 .leaflet-container {
-  height: 400px; /* set map height */
+  height: 400px; /* Reduce height */
   width: 100%;
+  max-width: 1200px; /* Optional: Limit max width */
+  margin: 20px auto; /* Center map */
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dam-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.dam-card:hover {
+  background: #e0f7fa;
+}
+
+.dam-card.active {
+  border: 2px solid #00796b;
+  background: #b2dfdb;
 }

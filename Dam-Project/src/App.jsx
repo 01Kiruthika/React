@@ -22,6 +22,7 @@ function App() {
   const [districts, setDistricts] = useState([]);
   const [selectedDistrict, setSelectedDistrict] = useState("All");
   const [selectedDam, setSelectedDam] = useState("All");
+  const [activeDam, setActiveDam] = useState(null); // dam selected on card click
 
   useEffect(() => {
     fetchData();
@@ -57,7 +58,7 @@ function App() {
 
   let filteredDams =
     selectedDam === "All"
-      ? dams
+      ? dams   
       : dams.filter(
         (dam) =>
           dam.district === selectedDistrict &&
@@ -98,7 +99,18 @@ function App() {
         </select>
       </div>
 
-      {/* Map */}
+    
+      <div className="container">
+        {filteredDams.length === 0 ? (
+          <p>No dams found</p>
+        ) : (
+          filteredDams.map((dam) => (
+            <DamCard key={dam.name_of_dam} dam={dam} />
+          ))
+        )}
+      </div>
+
+         {/* Map */}
       <MapContainer
         center={[11.1271, 78.6569]} // Tamil Nadu center coordinates
         zoom={7}
@@ -125,15 +137,6 @@ function App() {
         })}
       </MapContainer>
 
-      <div className="container">
-        {filteredDams.length === 0 ? (
-          <p>No dams found</p>
-        ) : (
-          filteredDams.map((dam) => (
-            <DamCard key={dam.name_of_dam} dam={dam} />
-          ))
-        )}
-      </div>
     </div>
   );
 }
