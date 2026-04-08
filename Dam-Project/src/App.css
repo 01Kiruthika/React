@@ -151,3 +151,9 @@ select {
   margin-right: 0;
   font-size: 18px;
 }
+/* Leaflet CSS */
+.leaflet-container {
+  height: 400px; /* set map height */
+  width: 100%;
+  border-radius: 10px;
+}

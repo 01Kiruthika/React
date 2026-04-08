@@ -1,6 +1,21 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import DamCard from "./DamCard";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+
+// Fix default marker icon issue in React-Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+});
 
 function App() {
   const [dams, setDams] = useState([]);
@@ -42,7 +57,7 @@ function App() {
 
   let filteredDams =
     selectedDam === "All"
-      ? dams   
+      ? dams
       : dams.filter(
         (dam) =>
           dam.district === selectedDistrict &&
@@ -82,6 +97,33 @@ function App() {
           ))}
         </select>
       </div>
+
+      {/* Map */}
+      <MapContainer
+        center={[11.1271, 78.6569]} // Tamil Nadu center coordinates
+        zoom={7}
+        className="leaflet-container"
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&copy; OpenStreetMap contributors"
+        />
+        {filteredDams.map((dam) => {
+          const lat = parseFloat(dam.latitude);
+          const lon = parseFloat(dam.longitude);
+          if (!lat || !lon) return null; // skip invalid coordinates
+
+          return (
+            <Marker key={dam.name_of_dam} position={[lat, lon]}>
+              <Popup>
+                <strong>{dam.name_of_dam}</strong>
+                <br />
+                District: {dam.district}
+              </Popup>
+            </Marker>
+          );
+        })}
+      </MapContainer>
 
       <div className="container">
         {filteredDams.length === 0 ? (
